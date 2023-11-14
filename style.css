@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: white;
+    overflow: hidden;
+    background-color: wheat;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+.calc-layout{
+    background-color: black;
+    border: 20px solid gray;
+    border-radius: 40px;
+    padding: 1%;
+    width: 20vw;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+    'show-num show-num show-num show-num'
+    'C PosNeg Mod Divide'
+    'Seven Eight Nine Multiply'
+    'Four Five Six Minus'
+    'One Two Three Plus'
+    'Zero Zero Dot Equal';
+}
+.show-num{
+    grid-area: show-num;
+    height: 10vw;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+}
+.show-num p{
+    margin: 0;
+}
+.have-calculated{
+    display: block;
+    text-align: right;
+    font-size: 3vw;
+    font-weight: bolder;
+    color: grey;
+}
+.input-num{
+    text-align: right;
+    display: block;
+    font-size: 4vw;
+    font-weight: bolder;
+}
+.calc-button{
+    width: 5vw;
+    height: 5vw;
+    font-size: large;
+    border-radius: 2.5vw;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(59, 59, 59);
+    border: hidden;
+    color: white;
+}
+.zero{
+    width: 100%;
+    grid-area: Zero;
+}
+.C,.pos-neg,.mod{
+    background-color: grey;
+    color: black;
+}
+.divide,.mul,.minus,.plus,.equal{
+    background-color: orange;
+}

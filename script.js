@@ -13,6 +13,12 @@ function C(){
     strNum=' ';
     ShowNumIn(strNum);
 }
+function AC(){
+    strNum=' ';
+    calculated = 0;
+    ShowNumIn(strNum);
+    document.getElementById("HaveCalc").innerHTML = ' ';
+}
 function PosNeg(){
     if(strNum[0]=='-' || strNum[1]=='-') {strNum = strNum.slice(1);}
     else{strNum = '-' + strNum;}

@@ -37,6 +37,7 @@ body{
     width: 20vw;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 .show-num p{
     margin: 0;

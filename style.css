@@ -4,6 +4,7 @@ body{
     color: white;
     overflow: hidden;
     background-color: wheat;
+    font-family: 'Inter', sans-serif;
 }
 
 .container{

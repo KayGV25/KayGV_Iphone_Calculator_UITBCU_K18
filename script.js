@@ -10,11 +10,11 @@ function NumberInput(strInNum){
     ShowNumIn(strNum);
 }
 function C(){
-    strNum='';
+    strNum=' ';
     ShowNumIn(strNum);
 }
 function PosNeg(){
-    if(strNum[0]=='-') {strNum = strNum.slice(1);}
+    if(strNum[0]=='-' || strNum[1]=='-') {strNum = strNum.slice(1);}
     else{strNum = '-' + strNum;}
     ShowNumIn(strNum);
 }

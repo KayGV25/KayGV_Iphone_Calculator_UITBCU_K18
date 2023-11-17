@@ -1,7 +1,9 @@
 let strNum  = '';
 let calculated = 0;
 let temp = 0;
-operator = ''
+const allow = ['0','1','2','3','4','5','6','7','8','9'];
+operator = '';
+
 function ShowNumIn(strInNum){
     document.getElementById("InNum").innerHTML = strInNum;
 }
@@ -86,3 +88,13 @@ function Equal(){
     document.getElementById("HaveCalc").innerHTML = calculated;
     document.getElementById("InNum").innerHTML = strNum;
 }
+
+document.addEventListener("keydown",function(key){
+    if(key.key == "Backspace"){
+        C();
+    }
+    else if(allow.includes(key.key)){
+        strNum += key.key;
+        ShowNumIn(strNum);
+    }
+})

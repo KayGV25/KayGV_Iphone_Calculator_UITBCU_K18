@@ -12,11 +12,11 @@ function NumberInput(strInNum){
     ShowNumIn(strNum);
 }
 function C(){
-    strNum=' ';
+    strNum='';
     ShowNumIn(strNum);
 }
 function AC(){
-    strNum=' ';
+    strNum='';
     calculated = 0;
     ShowNumIn(strNum);
     document.getElementById("HaveCalc").innerHTML = ' ';
@@ -85,6 +85,12 @@ function Equal(){
     temp = calculated;
     console.log(typeof temp)
     strNum = String(temp);
+    if(strNum=='NaN'){
+        strNum='';
+    }
+    if(calculated=='NaN'){
+        calculated='';
+    }
     document.getElementById("HaveCalc").innerHTML = calculated;
     document.getElementById("InNum").innerHTML = strNum;
 }
